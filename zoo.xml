@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="zoo.css"?>
+<zoo>
+	<title>Zoo - Ewidencja zwierząt</title>
+	<zwierzęta>
+		<zwierzę gromada="ssak" idOpiekuna="1">
+			<id>1</id>
+			<gatunek>Alpaka</gatunek>
+			<imię>Zosia</imię>
+			<wiek>4</wiek>
+			<waga>50</waga>
+			<wzrost>80</wzrost>
+			<jedzenie>
+				<produkt>siano</produkt>
+			</jedzenie>
+		</zwierzę>
+		<zwierzę gromada="ssak">
+			<id>2</id>
+			<gatunek>Fenek</gatunek>
+			<imię>Rudy</imię>
+			<wiek>2</wiek>
+			<waga>500</waga>
+			<wzrost>20</wzrost>
+			<jedzenie>
+				<produkt>jaja</produkt>
+				<produkt>chrząszcze</produkt>
+			</jedzenie>
+		</zwierzę>
+	</zwierzęta>
+
+	<opiekunowie>
+		<id>1</id>
+		<imię>Marcin</imię>
+		<nazwisko>Kolec</nazwisko>
+	</opiekunowie>
+
+	<sekcje>
+
+	</sekcje>
+
+	<jedzenie>
+
+	</jedzenie>
+</zoo>

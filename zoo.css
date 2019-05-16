@@ -1,0 +1,41 @@
+zwierzęta {
+	display: table;
+	width: 100%;
+    font-family: Helvetica;
+    font-size:25px;
+	font-weight: bold;
+}
+zwierzęta::before{
+	content: "Zwierzęta";
+	display: block;
+	width: 100%;
+    font-family: Helvetica;
+    font-size:30px;
+	font-weight: bold;
+	text-align:left;
+	padding: 15px;
+	letter-spacing: normal;
+	background-color: #62576c;
+	color: #F2E1D4;
+}
+zwierzę {
+	display: table-row-group;
+    text-align:left;
+	letter-spacing: normal;
+	background-color: #62576c;
+	color: #F2E1D4;
+}
+id, gatunek, imię, wiek, waga, wzrost, jedzenie{
+	margin:15px;
+}
+
+title {
+      display:block;
+      font-weight:bolder;
+      text-align:center;
+      font-size:45px;
+      background-color: #C9614D;
+      color: #FFFFF1;
+	  height: 70px;
+
+      }
