@@ -10,11 +10,11 @@
 <!ATTLIST opiekun id_o ID #REQUIRED>
 
 <!ELEMENT sekcja (#PCDATA)>
-<!ELEMENT zwierzę (id,gatunek,imię,wiek,waga,(wzrost|długość),sekcja,pożywienie)>
+<!ELEMENT zwierzę (gromada, gatunek,imię,wiek,waga,(wzrost|długość),sekcja,pożywienie)>
 <!ATTLIST zwierzę
   xmlns CDATA #FIXED ''
-  gromada NMTOKEN #REQUIRED
-  idOpiekuna CDATA #IMPLIED>
+  id ID #REQUIRED
+  idOpiekuna IDREF #IMPLIED>
 
 <!ATTLIST wiek jednostka CDATA #REQUIRED>
 <!ATTLIST waga jednostka CDATA #REQUIRED>
@@ -26,6 +26,7 @@
 <!ELEMENT wiek (#PCDATA)>
 <!ELEMENT waga (#PCDATA)>
 <!ELEMENT pesel (#PCDATA)>
+<!ELEMENT gromada (#PCDATA)>
 <!ELEMENT telefon (#PCDATA)>
 <!ELEMENT długość (#PCDATA)>
 <!ELEMENT wzrost (#PCDATA)>

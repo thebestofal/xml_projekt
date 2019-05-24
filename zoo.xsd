@@ -1,0 +1,146 @@
+
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+ <xs:simpleType name="peselType">
+	<xs:restriction base="xs:string">
+		<xs:pattern value="[0-9]{11}"/>
+	</xs:restriction>
+ </xs:simpleType>
+
+ <xs:simpleType name="telefonType">
+	<xs:restriction base="xs:string">
+		<xs:pattern value="[0-9]{9}"/>
+	</xs:restriction>
+ </xs:simpleType>
+
+  <xs:element name="zoo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="title"/>
+        <xs:element name="zwierzęta">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="zwierzę" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="gromada"/>
+                    <xs:element type="xs:string" name="gatunek"/>
+                    <xs:element type="xs:string" name="imię"/>
+                    <xs:element name="wiek">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:byte">
+                            <xs:attribute  name="jednostka">
+								<xs:simpleType >
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="szt"/>
+										<xs:enumeration value="kg"/>
+										<xs:enumeration value="t"/>
+										<xs:enumeration value="g"/>
+										<xs:enumeration value="lata"/>
+										<xs:enumeration value="m"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="waga">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute type="xs:string" name="jednostka" use="optional"/>						  </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="wzrost" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:byte">
+                            <xs:attribute type="xs:string" name="jednostka" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="długość" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:byte">
+                            <xs:attribute type="xs:string" name="jednostka" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="sekcja"/>
+                    <xs:element name="pożywienie">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="produkt" maxOccurs="unbounded" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="id" use="required"/>
+                  <xs:attribute type="xs:string" name="idOpiekuna" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+		 
+       	</xs:element>
+
+        <xs:element name="opiekunowie">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="opiekun" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="imię"/>
+                    <xs:element type="xs:string" name="nazwisko"/>
+                    <xs:element type="peselType" name="pesel"/>
+                    <xs:element type="telefonType" name="telefon"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="id_o" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="jedzenie">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="produkty" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="nazwa"/>
+                    <xs:element name="ilość">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute type="xs:string" name="jednostka" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="id_p" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+	 <xs:key name="myId">
+			<xs:selector xpath="./opiekunowie/opiekun"/>
+			<xs:field xpath="@id_o"/>
+	 </xs:key>
+     <xs:keyref name="myIdref" refer="myId">
+      		<xs:selector xpath="./zwierzęta/zwierzę"/>
+      		<xs:field xpath="@idOpiekuna"/>
+   	 </xs:keyref>	
+  </xs:element>
+</xs:schema>
+
+

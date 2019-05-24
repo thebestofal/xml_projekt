@@ -4,8 +4,8 @@
 <zoo>
 	<title>Zoo - Ewidencja zwierząt</title>
 	<zwierzęta>
-		<zwierzę gromada="ssak" idOpiekuna="1">
-			<id>1</id>
+		<zwierzę id="_01" idOpiekuna="_11"> <!--<zwierzę id="_01" idOpiekuna="_110" -->
+			<gromada>ssak</gromada>
 			<gatunek>Alpaka</gatunek>
 			<imię>Zosia</imię>
 			<wiek jednostka="lata">4</wiek>
@@ -16,8 +16,8 @@
 				<produkt>siano</produkt>
 			</pożywienie>
 		</zwierzę>
-		<zwierzę gromada="ssak">
-			<id>2</id>
+		<zwierzę id="_02" idOpiekuna="_12">
+			<gromada>ssak</gromada>
 			<gatunek>Fenek</gatunek>
 			<imię>Rudy</imię>
 			<wiek jednostka="lata">2</wiek>
@@ -29,8 +29,8 @@
 				<produkt>chrząszcze</produkt>
 			</pożywienie>
 		</zwierzę>
-		<zwierzę gromada="ptak">
-			<id>3</id>
+		<zwierzę id="_03" idOpiekuna="_13">
+			<gromada>ptak</gromada>
 			<gatunek>Nandu</gatunek>
 			<imię>Nielotek</imię>
 			<wiek jednostka="lata">3</wiek>
@@ -41,8 +41,8 @@
 				<produkt>mieszanka dla ptaków</produkt>
 			</pożywienie>
 		</zwierzę>
-		<zwierzę gromada="ssak">
-			<id>4</id>
+		<zwierzę id="_04" idOpiekuna="_13">
+			<gromada>ssak</gromada>
 			<gatunek>Słoń afrykański</gatunek>
 			<imię>Zosia</imię>
 			<wiek jednostka="lata">50</wiek>
@@ -54,8 +54,8 @@
 				<produkt>owoce</produkt>
 			</pożywienie>
 		</zwierzę>
-		<zwierzę gromada="gad">
-			<id>5</id>
+		<zwierzę id="_05" idOpiekuna="_14">
+			<gromada>gad</gromada>
 			<gatunek>Krokodyl nilowy</gatunek>
 			<imię>Croco</imię>
 			<wiek jednostka="lata">9</wiek>
@@ -66,8 +66,8 @@
 				<produkt>ryby</produkt>
 			</pożywienie>
 		</zwierzę>
-		<zwierzę gromada="płaz">
-			<id>6</id>
+		<zwierzę id="_06" idOpiekuna="_14">
+			<gromada>płaz</gromada>
 			<gatunek>Rzekotka szmaragdowa</gatunek>
 			<imię>Gąbka</imię>
 			<wiek jednostka="lata">10</wiek>
@@ -81,16 +81,34 @@
 	</zwierzęta>
 
 	<opiekunowie>
-		<opiekun id_o="_1">
+		<opiekun id_o="_11">
 			<imię>Marcin</imię>
 			<nazwisko>Kolec</nazwisko>
 			<pesel>78040289819</pesel>
 			<telefon>555666777</telefon>
 		</opiekun>
+		<opiekun id_o="_12">
+			<imię>Aurelia</imię>
+			<nazwisko>Stokowiec</nazwisko>
+			<pesel>92102850526</pesel>
+			<telefon>222333555</telefon>
+		</opiekun>
+		<opiekun id_o="_13">
+			<imię>Wanda</imię>
+			<nazwisko>Kędzierska</nazwisko>
+			<pesel>91052705845</pesel>
+			<telefon>356558788</telefon>
+		</opiekun>
+		<opiekun id_o="_14">
+			<imię>Angelika</imię>
+			<nazwisko>Kankowska</nazwisko>
+			<pesel>87050773375</pesel>
+			<telefon>797855412</telefon>
+		</opiekun>
 	</opiekunowie>
 
 	<jedzenie>
-		<produkty id_p="_11">
+		<produkty id_p="_1">
 			<nazwa>siano</nazwa>
 			<ilość jednostka="t">5</ilość>
 		</produkty>
