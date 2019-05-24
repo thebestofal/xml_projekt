@@ -1,0 +1,43 @@
+<?xml encoding="UTF-8"?>
+
+<!ENTITY % dane_personalne "imię, nazwisko, pesel, telefon">
+<!ELEMENT zoo (title,zwierzęta,opiekunowie,jedzenie)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT zwierzęta (zwierzę)+>
+
+<!ELEMENT opiekunowie (opiekun)+>
+<!ELEMENT opiekun (%dane_personalne;)>
+<!ATTLIST opiekun id_o ID #REQUIRED>
+
+<!ELEMENT sekcja (#PCDATA)>
+<!ELEMENT zwierzę (id,gatunek,imię,wiek,waga,(wzrost|długość),sekcja,pożywienie)>
+<!ATTLIST zwierzę
+  xmlns CDATA #FIXED ''
+  gromada NMTOKEN #REQUIRED
+  idOpiekuna CDATA #IMPLIED>
+
+<!ATTLIST wiek jednostka CDATA #REQUIRED>
+<!ATTLIST waga jednostka CDATA #REQUIRED>
+<!ATTLIST wzrost jednostka CDATA #REQUIRED>
+<!ATTLIST długość jednostka CDATA #REQUIRED>
+
+<!ELEMENT nazwisko (#PCDATA)>
+<!ELEMENT gatunek (#PCDATA)>
+<!ELEMENT wiek (#PCDATA)>
+<!ELEMENT waga (#PCDATA)>
+<!ELEMENT pesel (#PCDATA)>
+<!ELEMENT telefon (#PCDATA)>
+<!ELEMENT długość (#PCDATA)>
+<!ELEMENT wzrost (#PCDATA)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT imię (#PCDATA)>
+<!ELEMENT pożywienie (produkt)*>
+<!ELEMENT produkt (#PCDATA)>
+<!ELEMENT jedzenie (produkty)*>
+
+<!ELEMENT produkty (nazwa, ilość)>
+<!ATTLIST produkty id_p ID #REQUIRED> 
+
+<!ELEMENT ilość (#PCDATA)>
+<!ELEMENT nazwa (#PCDATA)>
+<!ATTLIST ilość jednostka CDATA #REQUIRED> 

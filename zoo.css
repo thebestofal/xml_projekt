@@ -1,4 +1,4 @@
-zwierzęta {
+zwierzęta, opiekunowie, sekcje, jedzenie {
 	display: table;
 	width: 100%;
     font-family: Helvetica;
@@ -6,16 +6,31 @@ zwierzęta {
 	font-weight: bold;
 }
 zwierzęta::before{
-	content: "Zwierzęta";
+	content: "Zwierzęta: \a id  gatunek  imię  lata  waga  wzrost";
+	white-space: pre;
 	display: block;
 	width: 100%;
     font-family: Helvetica;
-    font-size:30px;
+    font-size:25px;
 	font-weight: bold;
 	text-align:left;
 	padding: 15px;
 	letter-spacing: normal;
-	background-color: #62576c;
+	background-color: #575858;
+	color: #F2E1D4;
+}
+opiekunowie::before{
+	content: " Opiekunowie: \a id  gatunek  imię  lata  waga  wzrost";
+	white-space: pre;
+	display: block;
+	width: 100%;
+    font-family: Helvetica;
+    font-size:25px;
+	font-weight: bold;
+	text-align:left;
+	padding: 15px;
+	letter-spacing: normal;
+	background-color: #575858;
 	color: #F2E1D4;
 }
 zwierzę {
@@ -25,8 +40,30 @@ zwierzę {
 	background-color: #62576c;
 	color: #F2E1D4;
 }
-id, gatunek, imię, wiek, waga, wzrost, jedzenie{
+
+id, gatunek, imię, wiek, waga, wzrost, pożywienie, pesel, telefon, ilość{
 	margin:15px;
+}
+opiekun {
+	display: table-row-group;
+    text-align:left;
+	letter-spacing: normal;
+	background-color: #507B60;
+	color: #F2E1D4;
+}
+sekcja {
+	display: table-row-group;
+    text-align:left;
+	letter-spacing: normal;
+	background-color: #62576c;
+	color: #F2E1D4;
+}
+produkty {
+	display: table-row-group;
+    text-align:left;
+	letter-spacing: normal;
+	background-color: #507B60;
+	color: #F2E1D4;
 }
 
 title {

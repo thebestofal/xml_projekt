@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="zoo.css"?>
+<!DOCTYPE zoo SYSTEM "zoo.dtd">
 <zoo>
 	<title>Zoo - Ewidencja zwierząt</title>
 	<zwierzęta>
@@ -7,38 +8,120 @@
 			<id>1</id>
 			<gatunek>Alpaka</gatunek>
 			<imię>Zosia</imię>
-			<wiek>4</wiek>
-			<waga>50</waga>
-			<wzrost>80</wzrost>
-			<jedzenie>
+			<wiek jednostka="lata">4</wiek>
+			<waga jednostka="kg">50</waga>
+			<wzrost jednostka="cm">80</wzrost>
+			<sekcja>pastwisko</sekcja>
+			<pożywienie>
 				<produkt>siano</produkt>
-			</jedzenie>
+			</pożywienie>
 		</zwierzę>
 		<zwierzę gromada="ssak">
 			<id>2</id>
 			<gatunek>Fenek</gatunek>
 			<imię>Rudy</imię>
-			<wiek>2</wiek>
-			<waga>500</waga>
-			<wzrost>20</wzrost>
-			<jedzenie>
+			<wiek jednostka="lata">2</wiek>
+			<waga jednostka="g">500</waga>
+			<wzrost jednostka="cm">20</wzrost>
+			<sekcja>drapieżniki</sekcja>
+			<pożywienie>
 				<produkt>jaja</produkt>
 				<produkt>chrząszcze</produkt>
-			</jedzenie>
+			</pożywienie>
+		</zwierzę>
+		<zwierzę gromada="ptak">
+			<id>3</id>
+			<gatunek>Nandu</gatunek>
+			<imię>Nielotek</imię>
+			<wiek jednostka="lata">3</wiek>
+			<waga jednostka="kg">20</waga>
+			<wzrost jednostka="m">1</wzrost>
+			<sekcja>safari</sekcja>
+			<pożywienie>
+				<produkt>mieszanka dla ptaków</produkt>
+			</pożywienie>
+		</zwierzę>
+		<zwierzę gromada="ssak">
+			<id>4</id>
+			<gatunek>Słoń afrykański</gatunek>
+			<imię>Zosia</imię>
+			<wiek jednostka="lata">50</wiek>
+			<waga jednostka="t">6</waga>
+			<wzrost jednostka="m">3</wzrost>
+			<sekcja>safari</sekcja>
+			<pożywienie>
+				<produkt>siano</produkt>
+				<produkt>owoce</produkt>
+			</pożywienie>
+		</zwierzę>
+		<zwierzę gromada="gad">
+			<id>5</id>
+			<gatunek>Krokodyl nilowy</gatunek>
+			<imię>Croco</imię>
+			<wiek jednostka="lata">9</wiek>
+			<waga jednostka="kg">500</waga>
+			<długość jednostka="m">3</długość>
+			<sekcja>safari</sekcja>
+			<pożywienie>
+				<produkt>ryby</produkt>
+			</pożywienie>
+		</zwierzę>
+		<zwierzę gromada="płaz">
+			<id>6</id>
+			<gatunek>Rzekotka szmaragdowa</gatunek>
+			<imię>Gąbka</imię>
+			<wiek jednostka="lata">10</wiek>
+			<waga jednostka="g">200</waga>
+			<długość jednostka="cm">11</długość>
+			<sekcja>terraria</sekcja>
+			<pożywienie>
+				<produkt>owady</produkt>
+			</pożywienie>
 		</zwierzę>
 	</zwierzęta>
 
 	<opiekunowie>
-		<id>1</id>
-		<imię>Marcin</imię>
-		<nazwisko>Kolec</nazwisko>
+		<opiekun id_o="_1">
+			<imię>Marcin</imię>
+			<nazwisko>Kolec</nazwisko>
+			<pesel>78040289819</pesel>
+			<telefon>555666777</telefon>
+		</opiekun>
 	</opiekunowie>
 
-	<sekcje>
-
-	</sekcje>
-
 	<jedzenie>
-
+		<produkty id_p="_11">
+			<nazwa>siano</nazwa>
+			<ilość jednostka="t">5</ilość>
+		</produkty>
+		<produkty id_p="_2">
+			<nazwa>chrząszcze</nazwa>
+			<ilość jednostka="kg">10</ilość>
+		</produkty>
+		<produkty id_p="_3">
+			<nazwa>jaja</nazwa>
+			<ilość jednostka="szt">500</ilość>
+		</produkty>
+		<produkty id_p="_4">
+			<nazwa>mieszanka dla ptaków</nazwa>
+			<ilość jednostka="kg">200</ilość>
+		</produkty>
+		<produkty id_p="_5">
+			<nazwa>owoce</nazwa>
+			<ilość jednostka="kg">100</ilość>
+		</produkty>
+		<produkty id_p="_6">
+			<nazwa>ryby</nazwa>
+			<ilość jednostka="szt">50</ilość>
+		</produkty>
+		<produkty id_p="_7">
+			<nazwa>owady</nazwa>
+			<ilość jednostka="kg">50</ilość>
+		</produkty>
 	</jedzenie>
 </zoo>
+
+
+
+
+
