@@ -1,69 +1,11 @@
-zwierzęta, opiekunowie, sekcje, jedzenie {
-	display: table;
-	width: 100%;
-    font-family: Helvetica;
-    font-size:25px;
-	font-weight: bold;
-}
-zwierzęta::before{
-	content: "Zwierzęta: \a id  gatunek  imię  lata  waga  wzrost";
-	white-space: pre;
-	display: block;
-	width: 100%;
-    font-family: Helvetica;
-    font-size:25px;
-	font-weight: bold;
-	text-align:left;
-	padding: 15px;
-	letter-spacing: normal;
-	background-color: #575858;
-	color: #F2E1D4;
-}
-opiekunowie::before{
-	content: " Opiekunowie: \a id  gatunek  imię  lata  waga  wzrost";
-	white-space: pre;
-	display: block;
-	width: 100%;
-    font-family: Helvetica;
-    font-size:25px;
-	font-weight: bold;
-	text-align:left;
-	padding: 15px;
-	letter-spacing: normal;
-	background-color: #575858;
-	color: #F2E1D4;
-}
-zwierzę {
-	display: table-row-group;
-    text-align:left;
-	letter-spacing: normal;
-	background-color: #62576c;
-	color: #F2E1D4;
-}
-
-id, gatunek, imię, wiek, waga, wzrost, pożywienie, pesel, telefon, ilość{
-	margin:15px;
-}
-opiekun {
-	display: table-row-group;
-    text-align:left;
-	letter-spacing: normal;
-	background-color: #507B60;
-	color: #F2E1D4;
-}
-sekcja {
-	display: table-row-group;
-    text-align:left;
-	letter-spacing: normal;
-	background-color: #62576c;
-	color: #F2E1D4;
-}
-produkty {
-	display: table-row-group;
-    text-align:left;
-	letter-spacing: normal;
-	background-color: #507B60;
-	color: #F2E1D4;
+zoo {
+    font-size: 18px;
+    width: 63%;
+    margin: 25px, 25px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #62576c;
+    min-width: 1000px;
 }
 
 title {
@@ -74,5 +16,56 @@ title {
       background-color: #C9614D;
       color: #FFFFF1;
 	  height: 70px;
+	  width: 100%;
 
       }
+
+zwierzęta {
+    display: block;
+    margin-left: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+    float: left;
+    background-color: #C9614D;
+}
+ 
+opiekunowie {
+    display: block;
+    margin-left: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+    float: left;
+    background-color: #C9614D;
+}
+
+jedzenie {
+    display: block;
+    margin-left: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+    float: left;
+    background-color: #C9614D;
+}
+
+
+zwierzę, opiekun, produkty {
+    background-color: #F2E1D4;
+    display: block;
+    padding: 10px;
+    text-align: left;
+    margin: 5px;
+}
+zwierzę:hover {
+    background-color: #575858;
+}
+
+opiekun:hover {
+    background-color: #507B60;
+}
+
+produkty:hover {
+    background-color: #C961AD;
+}

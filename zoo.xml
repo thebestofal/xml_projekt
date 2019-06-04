@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="zoo.css"?>
+<?xml-stylesheet type="text/css" href="newcss.css"?>
 <!DOCTYPE zoo SYSTEM "zoo.dtd">
 <zoo>
 	<title>Zoo - Ewidencja zwierząt</title>
